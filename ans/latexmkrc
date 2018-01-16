@@ -1,0 +1,10 @@
+$pdflatex = 'xelatex -shell-escape -synctex=1 -interaction=nonstopmode %O %S';
+$pdf_mode = 1;
+$dvi_mode = 0;
+$postscript_mode = 0;
+$pdf_previewer = 'start sumatrapdf %O %S';
+$pdf_update_method = 0;
+$out_dir = 'build';
+$aux_dir = 'build';
+
+@default_files = ('__main__.tex');

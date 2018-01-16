@@ -1,0 +1,8 @@
+## LaTeX
+
+# Compiled pdfs
+*.pdf
+!/img/*.pdf
+
+# *.svg directory
+svg/

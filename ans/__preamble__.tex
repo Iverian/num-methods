@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,
+            left=2cm,
+            right=1cm,
+            top=2cm,
+            bottom=2cm]
+            {geometry}
+
+\usepackage{fontspec}
+\usepackage{subfiles}
+
+\usepackage{amsmath,
+            amsthm,
+            amssymb,
+            unicode-math,
+            tensor}
+
+\usepackage{polyglossia,
+            graphicx,
+            wrapfig,
+            hyperref,
+            multicol,
+            multirow,
+            tabularx,
+            booktabs,
+            comment}
+
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\setkeys{russian}{babelshorthands=true}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{STIX Two Text}
+\setmathfont{STIX Two Math}
+\DeclareSymbolFont{letters}{\encodingdefault}{\rmdefault}{m}{it}
+
+\newfontfamily{\cyrillicfont}{STIX Two Text} 
+\newfontfamily{\cyrillicfontrm}{STIX Two Text}
+\newfontfamily{\cyrillicfonttt}{Courier New}
+\newfontfamily{\cyrillicfontsf}{STIX Two Text}
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\numberwithin{equation}{section}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\theoremstyle{definition}
+\newtheorem{definition}{Опр.}[section]
+\theoremstyle{remark}
+\newtheorem{statement}{Утв.}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Теор.}[section]
+
+\addto\captionsrussian{
+    \renewcommand{\proofname}{Док-во}
+}
+
+\graphicspath{{img/}}
+\everymath{\displaystyle}
+
+\newcommand{\llabel}[1]{\label{\thesubsection:#1}}
+\newcommand{\lref}[1]{\ref{\thesubsection:#1}}
+
+\def\twodigits#1{% 
+\ifnum#1<10 0\fi 
+\number#1}
+
+\newcommand{\qtitle}[1]{
+  \addcontentsline{toc}{subsection}{\twodigits{#1}}%
+  \paragraph{\twodigits{#1}}
+}
+
+\newcommand{\ssection}[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{#1}%
+  \section*{#1}%
+}
+
