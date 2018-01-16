@@ -1,9 +1,38 @@
 \documentclass[__main__.tex]{subfiles}
-
 \begin{document}
-
-\qtitle{31}
-Пространство сплайнов первой степени единичного дефекта, его стандартный базис.
-
-
+	\qtitle{31}
+	Пространство сплайнов первой степени единичного дефекта, его стандартный базис.\\
+	
+	Пусть $A = \langle a=\tau_0,\tau_1,\cdots,\tau_k = b \rangle$ - сетка $[a;b]$ и $^>y = [y_0, y_1, \cdots, y_k \rangle \in\;^>R^{|A|(A)}$ - $A$ - сеточная функция.
+	\begin{definition}
+		(итерполяционного сплайна 1-ой степени деффекта 1)\\
+		Интерполяционным сплайном 1-ой степени для $A$ - сеточной функции $^>y$ называют функцию $spl_1\left(A;\;^>y\right)$, график которой является ломанной с узлами $(\tau_0, y_0),(\tau_1, y_1),\cdots, (\tau_k, y_k)$.
+	\end{definition}
+	Пространство интерполяционных сплайнов 1-ой степени $spl_1(A)$ на сетке $A$ имеет базис $H = \left(h_0,h_1,\cdots,h_k\right)$, в котором $h_i = spl_1\left(A;\;^>e_i\right)$, где $\left(^>e_1, ^>e_2,\cdots, ^>e_{|A|}\right)$ - стандартный базис пространства $^>R^{|A|}$\\
+	Таким образом 
+	\begin{gather*}
+		spl_1\left(A,^>y\right) = \sum_{i=0}^{k}y_ispl_1\left(A,\;^>e_{i+1}\right)
+	\end{gather*}
+	Если $s_1 = [a=\tau_0;\tau_1], s_2=[\tau_1,\tau_2],\cdots, s_k=[\tau_{k-1},\tau_{k}]$ - подотрезки, на которые подразделяется отрезок $[a;b]$, то сплайн $spl_1\left(A;\; ^>y\right)$ определяется списком полиномов $\left(P_1,P_2,\cdots, P_k\right)$, где:
+	\begin{gather*}
+		P_i(\tau) = a_i+b_i(\tau-\tau_{i-1})
+	\end{gather*}
+	для $\tau \in s_i, i=\overline{1,h}$
+	\begin{equation*}
+		\begin{cases}
+			P_1(\tau_0) = y_0\\
+			P_1(\tau_1) = P_2(\tau_1) = y_1\\
+			\cdots\\
+			P_{k-1}(\tau_{k-1}) = P_k(\tau_{k-1}) = y_{k-1}\\
+			P_k(\tau_{k}) = y_k
+		\end{cases}
+	\end{equation*}
+	Следовательно:
+	\begin{equation*}
+		\begin{cases}
+			a_1 = y_0; a_2 = y_2; \cdots; a_k = y_{k-1}\\
+			b_i = \frac{y_i-y_{i-1}}{\tau_i - \tau_{i-1}}
+		\end{cases}
+	\end{equation*}
+	для $ i = \overline{1,k}$
 \end{document}
