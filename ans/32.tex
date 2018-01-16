@@ -1,9 +1,32 @@
 \documentclass[__main__.tex]{subfiles}
-
 \begin{document}
-
-\qtitle{32}
-Пространство сплайнов второй степени единичного дефекта, его стандартный базис.
-
-
+	\qtitle{32}
+	Пространство сплайнов второй степени единичного дефекта, его стандартный базис.
+	\begin{definition}
+		\label{32_1}
+		(Интерполяционного сплайна 2-ой степени дефекта 1)\\
+		Пусть $A = \langle a = \tau_0,\tau_1,\cdots, \tau_k = b\rangle$ - сетка отрезка $[a,b]$. Интерполяционным сплайном 2-ой степени дефекта 1 для $A$ - сеточной функции 
+		\begin{gather*}
+			^>y = \hat{A}(f) = [y_0, y_1, \cdots, y_k \rangle \in \; ^>R^{|A|}(A)
+		\end{gather*}
+		называется функция $\varphi \in C^1\left([a,b], R\right)$, для которой на отрезке $[\tau_{i-1}; \tau_i]$ для $\tau \in [\tau_{i-1}; \tau_i]$ справедливо равенство 
+		\begin{gather*}
+			\varphi(\tau) = a_i+b_i(\tau - \tau_i)+c_i(\tau - \tau_i)^2
+		\end{gather*}
+		где $a_i,b_i,c_i \in R$, причем
+		\begin{enumerate}
+			\item этот сплайн на отрезке $[\tau_0;\tau_1]$ линеен
+			\item этот сплайн непрерывен и его значения в узлах сетки совпадают со значениями интерполируемой функции
+			\item первая производная этого сплайна также непрерывна
+		\end{enumerate}
+	\end{definition}
+	\begin{definition}
+		(его стандартного базиса)\\
+		Список $H = (h_1,h_2,\cdots, h_k)$ где $h_i = spl_2(A,\; ^>e_{i+1})$ для $i=\overline{0,k}$ является базисом нормированного пространства $spl_2(A)$
+	\end{definition}
+	Если сетка $A = \langle a=\tau_0, \tau_1,\cdots,\tau_k = b \rangle$ является равномерной и ее шаг $h = \frac{b-a}{k} = stp(A)$, то из определения (\ref{32_1}) для $i = \overline{1,k}$  на отрезке $\tau_{i-1};\tau_i$ находятся значения коэффициентов полинома $P_i(\tau) = a_i+b_i(\tau-\tau_i)+c_i(\tau-\tau_i)^2$:
+	\begin{gather*}
+		a_i = y_{i-1},\;\;\;\;\;\;\;b_i = b_{i-1}+2c_{i-1}h,\;\;\;\;\;\;\;c_i = \frac{y_i-y_{i-1}-b_ih}{h^2}
+	\end{gather*}
+	где $i=\overline{2,k}$
 \end{document}
