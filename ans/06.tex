@@ -3,7 +3,43 @@
 \begin{document}
 
 \qtitle{06}
-Метод наименьших квадратов (МНК) для решения СЛАУ и лемма о МНК-решении.
+Метод наименьших квадратов (МНК) для решения СЛАУ и лемма о МНК-решении.\\
 
-
+Рассмотрим СЛАУ:
+\begin{gather}
+X{^>\beta} + {^>\varepsilon} = {^>y},
+\end{gather}
+где $X=\left(x_{ij}\right)_{n \times m}$, ${^>\beta}=\left[\beta_{1},\dots,\beta_{m}\right>$ -- вектор параметров, ${^>y}=\left[y_1,\dots,y_n\right>$ -- вектор результатов, ${^>\varepsilon}=\left[\varepsilon_1,\dots,\varepsilon_n\right>$ -- вектор ошибок. Тогда оценим вектор параметров таким образом, чтобы минимизировать квадрат вектора ошибок ${^>\varepsilon}$: ${^>\hat\beta}=\min_{^>\beta}\left\{\left( {^>y}-X{^>\beta} \right)^2\right\}$. Определим функцию $f({^>\beta})=\left( {^>y}-X{^>\beta} \right)^2$
+\begin{flalign}
+\begin{split}
+\frac{\partial f({^>\beta})}{\partial \beta_n}
+=&
+\partial^{n}
+\left[
+y_{i}y^{i}+x^{ij}x_{ik}\beta^k \beta_j-2x^{ij}y_{i}\beta_j
+\right]
+=\\
+=
+&
+x^{ij}x_{ik}\left(\beta_j\delta^{kn}+\beta^{k}\delta\indices{^n_j}\right)
+-2x^{ij}y_i\delta\indices{^n_j}
+=\\
+=&
+2x^{in}\left(x_{ij}\beta^j - y_i\right)
+\end{split}
+\end{flalign}
+Тогда нужная оценка достигается при $\partial^{n}f=0 \Longrightarrow x^{in}x_{ij}\beta^{j}=x^{in}y_i$. Таким образом можно сформулировать лемму о МНК - решении.
+\begin{statement}
+СЛАУ $X{^>\beta} + {^>\varepsilon} = {^>y}$ имеет МНК - решение, минимизирующее квадрат вектора ошибок ${^>\varepsilon}$ если $\det{M}=\det\left(X^TX\right)\neq 0$ и само решение представляется в виде решения \emph{нормальной СЛАУ:}
+\begin{flalign}
+\begin{split}
+&
+X^{T}X{^>\beta}=X^T{^>y}
+\Longrightarrow\\
+\Longrightarrow
+&
+{^>\hat\beta}=(X^TX)^{-1}X^{T}{^>y}=M^{-1}X^T{^>y}
+\end{split}
+\end{flalign}
+\end{statement}
 \end{document}

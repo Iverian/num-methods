@@ -3,7 +3,73 @@
 \begin{document}
 
 \qtitle{44}
-Схема метода коллокаций для численного решения линейных уравнений в банаховом пространстве непрерывных на отрезке функций на примере схемы метода коллокаций для численного решения линейного интегрального уравнения Фредгольма II-рода с аналитически заданным непрерывным ядром интегрального оператора этого уравнения.
+Схема метода коллокаций для численного решения линейных уравнений в банаховом пространстве непрерывных на отрезке функций на примере схемы метода коллокаций для численного решения линейного интегрального уравнения Фредгольма II-рода с аналитически заданным непрерывным ядром интегрального оператора этого уравнения.\\
 
+Рассмотрим интегральное уравнение Фредгольма 2-го рода:
+\begin{gather}
+\varepsilon[y(x)]
+\equiv
+y(x)-\lambda\int\limits_a^b K(x,t)y(t)dt - f(x) = 0,
+\label{44:eq}
+\end{gather}
+приближенное решение будем искать в виде функций:
+\begin{gather}
+Y_n(x)=\Phi(x,{^>a}),
+\label{44:sol}
+\end{gather}
+с вектором свободных параметров ${^>a}=\left[a_1,\dots,a_n\right>$. Подставляя (\ref{44:sol}) в (\ref{44:eq}), получим невязку:
+\begin{gather}
+\varepsilon[Y_n(x)]
+=
+Y_n(x)-\lambda\int\limits_a^b K(x,t)Y_n(t)dt - f(x),
+\end{gather}
+в случае точного решения невязка равна нулю, поэтому параметры ${^>a}$ подбираются так, чтобы минимизировать итоговую невязку, если
+\begin{gather}
+\lim\limits_{n\rightarrow\infty}Y_n(x)=y(x),
+\end{gather}
+то взяв достаточно большое число параметров, можно найти решение $y(x)$ с любой наперед заданной точностью.
+
+Построим $Y_n(x)$ как:
+\begin{gather}
+Y_n(x)=\varphi_0(x)+\sum_{i=1}^{n}a_{i}\varphi_{i}(x),
+\label{44:sum}
+\end{gather}
+где $\left\{ \varphi_i(x) \right\}^{n}$ -- ЛНЕЗ система \emph{координатных функций}. В частности можно положить $\varphi_0(x)=0$ или $\varphi_0(x)=f(x)$. Подставляя (\ref{44:sum}) в (\ref{44:eq}), получим:
+\begin{gather}
+\varepsilon[Y_n(x)]
+=
+\varphi_0(x)+\sum_{i=1}^{n}a_i\varphi_i(x)-f(x)-\lambda\int\limits_a^b K(x,t)
+\left[
+\varphi_0(t)+\sum_{i=1}^{n}a_i\varphi_i(t)
+\right]dt
+\end{gather}
+или
+\begin{gather}
+\varepsilon[Y_n(x)]
+=
+\psi_0(x)+\sum_{i=1}^{n}a_i\psi(x,\lambda),
+\end{gather}
+где
+\begin{flalign}
+&
+\psi_0(x,\lambda)
+=
+\varphi_0(x)-f(x)-\lambda\int\limits_{a}^{b}K(x,t)\varphi_0(t)dt,
+\\
+&
+\forall{i\in\mathbb{N}}\colon
+\psi_i(x,\lambda)
+=\varphi_i(x)-\lambda\int\limits_a^b K(x,t)\varphi_i(t)dt,
+\end{flalign}
+
+Согласно \emph{методу коллокации} потребуем, чтобы \textbf{невязка $\varepsilon[Y_n(x)]$ обращалась в нуль в заданной системе точек коллокации ${^>x}=\left[x_1,\dots,x_n\right>$}, где $x_i\in[a,b]$, т.е. полагаем, что:
+\begin{gather}
+\forall{j\in\overline{1,n}}\colon\varepsilon[Y_n(x_j)]=0,
+\end{gather}
+отсюда получим СЛАУ для определения вектора коэффициентов ${^>a}$:
+\begin{gather}
+F{^>a} = -{^>\psi_0},
+\end{gather}
+где $F=(f_{ij})_{n\times n}\colon f_{ij}=\psi_{j}(x_i)$ и ${^>\psi_0}=\left[\psi_0(x_1),\dots,\psi_0(x_n)\right>$
 
 \end{document}
