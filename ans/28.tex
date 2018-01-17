@@ -3,7 +3,56 @@
 \begin{document}
 
 \qtitle{28}
-Составная квадратурная формула трапеций.
-
+Составная квадратурная формула трапеций.\\
+\\
+Пусть $f_{0}\in C^{2}([c,c+h],\mathbb{R}),$. Тогда согласно интерполяции Лагранжа и ее остатка в форме Коши функции f на сетке <c,c+h>, получаем:
+\begin{gather}
+	\label{a1}
+	f_{0}(r)=\frac{(c+h-r)f_{0}(c)+(r-c)f_{0}(c+h)}{h}+\frac{f''(\xi(r))}{2}(r-c)(r-c-h),
+	\end{gather}
+где $\xi(r)\in (c,c+h)$.
+Следовательно 
+\begin{gather}
+	\label{a2}
+	\int_{c}^{c+h}f(r)dr=\frac{f_{0}c}{h}\int_{c}^{c+h}f(c+h-r)dr+\frac{1}{h}f_{0}(c+h)+\int_{c}^{c+h}(r-c)dr+r_{[c,cc+h]}=\frac{h}{2}(f_{0}(r)+f_{0}(r+c)+r_{[c,c+h]}
+	\end{gather}
+где
+\begin{gather}
+	\label{a3}
+|r_{[c,c+h]}|\leq\frac{||f'||_{[c,c+h]}}{2!}\int_{c}^{c+h}(r-c)(c+h-r)dr=\frac{||f'||_{[c,c+h]}}{2!}\int_{0}^{h}t(h-t)dt
+\end{gather}
+Поэтому формулу 
+\begin{gather}
+	\label{a4}
+	\int_{c}^{c+h}f(r)dr=\frac{h}{2}(f_{0}(c+f_{0}(c+h))
+\end{gather}
+Нзывают формулой \textbf{Котеса трапеции}.\\
+Поскольку $\int_{0}^{h}t(h-t)dt=\frac{h^{3}}{6}$, то из \ref{a3} и \ref{a4} следует, что
+	\begin{gather}
+		\label{a5}
+			\int_{c}^{c+h}f(r)dr=\frac{h}{2}(f_{0}(c+f_{0}(c+h))+r_{[c,c+h]},
+		\end{gather}
+где $|r_{[c,c+h]}|\leq=\frac{||f'||_{[c,c+h]}}{12}h^{3}$.\\
+Введем на [a;b] равномерную сетку А=$<a=r_{0},r_{1},..r_{k}=b$ шага h=stp(A) и рассмотрим функцию $f\in C^{2}([a;b],\mathbb{R})$\\ \\
+Используя для кажого отрезка $[r_{i-1},r_{i}]$ для i=1..k квадратурную формулу Котеса для трапеции \ref{a5} и получаем:\\
+\begin{gather}
+	\label{a6}
+	\int_{a}^{b}f(r)dr=\sum_{i=1}^{k}\int_{r_{i-1}}^{r_{i}}f(r)dr=\sum_{i=1}^{k}(\frac{h}{2}(f(r_{i-1})+f(r_{i}))+r_{[r_{i-1},r_{i}]})=h(\frac{f(r_{0})}{2}+f(r_{1})+f(r_{2})+...f(r_{k-1})+\frac{f(r_{k})}{2})+r_{[a,b]},
+	\end{gather}
+где 
+\begin{gather}
+	\label{a7}
+	r_{[a,b]}\leq\frac{||f'||}{12}\sum_{i=1}^{k}h^{3}=[ h=\frac{b-a}{k, k=\frac{b-a}{h}}  ]= \frac{||f'||(b-a)}{12} h^{2}
+	\end{gather}
+Таким образом , получаем из \ref{a6}, \ref{a7} 
+\begin{gather}
+	\label{a8}
+	\int_{a}^{b}f(r)dr=h(\frac{f(r_{0})}{2}+f(r_{1})+f(r_{2})+...f(r_{k-1})+\frac{f(r_{k})}{2})+o(h^{2})
+\end{gather}
+  При  $h^{2}\rightarrow$0 получаем \textbf{формулу трапеций }:
+  \begin{gather}
+  	\label{a9}
+  	\int_{a}^{b}f(r)dr=h(\frac{f(r_{0})}{2}+f(r_{1})+f(r_{2})+...f(r_{k-1})+\frac{f(r_{k})}{2}).
+  \end{gather}
 
 \end{document}

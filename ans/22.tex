@@ -3,7 +3,36 @@
 \begin{document}
 
 \qtitle{22}
-Аналитический вид интерполяционного полинома Лагранжа и матричный способ вычисления его коэффициентов.
+Аналитический вид интерполяционного полинома Лагранжа и матричный способ вычисления его коэффициентов.\\
 
+Для сетки $A = <\tau_0, \tau_1, \cdots\, \tau_k>$, где $A$ - сеточные функции ${}^{>}y = [y_0, y_1, \cdots\, y_k> \in {}^{>}\mathbb{R}^{|A|}(A)$ строится $A$-интерполяционный полином Лагранжа $L_k(A; {}^{>}y) = L_k$ в виде:
+
+\begin{gather}
+L_k(\tau) = \sum_{i = 0}^{k}\frac{(\tau - \tau_0)\cdot \text{...} \cdot(\tau - \tau_{i -1})\cdot(\tau - \tau_{i + 1})\cdot \text{...} \cdot (\tau - \tau_k)}{(\tau_i - \tau_0)\cdot \text{...} \cdot(\tau_i - \tau_{i -1})\cdot(\tau_i - \tau_{i + 1})\cdot \text{...} \cdot (\tau_i - \tau_k)}y_j
+\label{answer_22_1}
+\end{gather}
+
+где $\tau \in [a; b]$\\
+
+Очевидно, что $L_k(\tau_i) = y_i$ для $i = \overline{0, k}$\\
+
+Формулу \ref{answer_22_1} называют аналитическим видом $A$-интерполяционного многочлена Лагранжа для сетчатой функции ${}^{>}f$. Если $g = L_k(A; {}^{>}y)$, то функция g - решение задачи $A$-интерполяции ф-ии ${}^{>}f$. Такая интерполяция называется интерполяцией Лагранжа.\\
+
+Пусть полином $L_k(\tau)$ вида \ref{answer_22_1} имеет представление:
+
+$$L_k(\tau) = x_0 + x_1 \tau + x_2 \tau^2 + \text{...} + x_k \tau^k$$
+
+где $\tau \in [a; b]$ и ${}^{>}x = [x_0, x_1, \text{...}, x_k> \in {}^{>}\mathbb{R}^{|A|}$ - неизвестные коэффициенты. Тогда для определения вектора ${}^{>}x$ решают СЛАУ:
+
+$$
+\begin{cases}
+x_0 + x_1 \tau_0 + x_2 \tau_0^2 + \text{...} + x_k \tau_0^k = y_0 \\
+x_0 + x_1 \tau_1 + x_2 \tau_1^2 + \text{...} + x_k \tau_1^k = y_1 \\
+\cdots\\
+x_0 + x_1 \tau_k + x_2 \tau_k^2 + \text{...} + x_k \tau_k^k = y_k \\
+\end{cases}
+\Leftrightarrow T \cdot {}^{>}x = {}^{>}y$$
+
+где $T = \begin{pmatrix} 1 & \tau_0 & \tau_0^2 & \cdots & \tau_0^k \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & \tau_k & \tau_k^2 & \cdots & \tau_k^k \end{pmatrix}$ - матрица Ван-дер-Монда, и $det(T) = \prod_{j = 0}^{k}\prod_{i = 0}^{j - 1}(\tau_j - \tau_i) \neq 0$
 
 \end{document}

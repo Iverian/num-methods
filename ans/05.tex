@@ -3,7 +3,58 @@
 \begin{document}
 
 \qtitle{05}
-Степенные матричные ряды и аналитические матричные функции.
+Степенные матричные ряды и аналитические матричные функции.\\
 
+Рассмотрим банахово пространство $(X,\Vert\cdot\Vert)$ с дополнительно определенной операцией умножения элементов.
+
+\begin{definition}[Банахова алгебра]
+\emph{Банаховой алгеброй} называется банахово пространство над полем $\mathbb{R}$ $(X,\Vert\cdot\Vert)$ с операцией умножения элементов $\circ$, для которой выполняется
+\begin{itemize}
+\item
+существование нейтрального элемента (единицы) $I_{\circ}$:
+$
+\forall{x\in X}I_{\circ}\circ{x}=x\circ{I}_{\circ}=x
+$;
+\item
+ассоциативность;
+\item
+$\forall{\alpha,\beta\in\mathbb{R},x,y\in X}\colon(\alpha x)\circ(\beta y) = (\alpha\beta)\circ(x y)$;
+\item
+$\forall{x,y,z\in{X}}\colon x\circ(y+z)=x\circ{y}+x\circ{z}\wedge(y+z)\circ{x}=y\circ{x}+z\circ{x}$;
+\item
+$\Vert I_{\circ} \Vert = 1$;
+\item
+$\forall{x,y\in X}\Vert x\circ{y} \Vert \le \Vert{x}\Vert\cdot\Vert{y}\Vert$;
+\end{itemize}
+\end{definition}
+
+\emph{
+Банахово пространство -- нормированное линейное пространство, полное по метрике, порожденной нормой. Одним из явных примеров банаховых алгебр является линейное пространство матриц с ассоциативной операцией матричного умножения. 
+}
+
+Теперь мы можем аналогично определить степенные ряды над банаховой алгеброй:
+\begin{gather}
+\forall t\in X \colon \sum_{i=0}^{\infty}a_{k}t^{k}=A(t),
+\end{gather}
+где $\forall{k\in\mathbb{N}}\colon a_k\in\mathbb{R}$. Вспомним определение радиуса сходимости $R$ степенного ряда
+\begin{gather}
+\overline{\lim\limits_{m\rightarrow\infty}}\frac{|a_{m+1}|}{|a_{m}|}
+=
+\overline{\lim\limits_{m\rightarrow\infty}}\sqrt[n]{|a_m|}
+=
+R>0.
+\end{gather}
+Тогда мы можем определить функции на банаховых пространствах таким образом: рассмотрим функцию $f(x)$ с рядом Тейлора:
+\begin{gather}
+f(t)=\sum_{k=0}^{\infty}f_{k}t^{k},
+\end{gather}
+тогда, заменив аргумент функции $f$ на элемент банахова пространства $x\in X$, получим отображение $f\colon X\rightarrow X$:
+\begin{gather}
+f(x)=\sum_{k=0}^{\infty}f_{k}x^{k},
+\end{gather}
+Областью определения полученной функции будет радиус сходимости соответствующего ряда Тейлора, а для $\Vert f(x)\Vert$ получим:
+\begin{gather}
+\forall{x\in X}\colon\Vert{x}\Vert<R\colon\Vert{f(x)}\Vert\le\sum_{k=0}^{\infty}|f_k|\cdot\Vert{x}\Vert^{k},
+\end{gather}
 
 \end{document}

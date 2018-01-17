@@ -1,0 +1,19 @@
+## LaTeX
+
+# Build files
+*.aux
+*.log
+*.synctex.gz
+*.xdv
+*.fls
+*.out
+_minted-*/
+build/
+*(busy)
+
+## Misc
+
+# Personal files
+*_p.*
+~$*.*
+вопросы.pdf

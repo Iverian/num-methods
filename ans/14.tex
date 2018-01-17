@@ -6,4 +6,34 @@
 Устойчивость метода простой итерации для решения СЛАУ.
 
 
+Пусть на каждом шаге использования рабочей формулы 
+\begin{gather*}
+\;^>x_k=G\cdot \;^>x_{k-1}+\;^>f, \qquad k \in \mathbb N
+\end{gather*}
+метода простой итерации возникает вычислительная погрешность, по норме не превосходящая $\varepsilon >0$. Тогда итерационная последовательность принимает вид 
+\begin{gather*}
+\left\{
+	\begin{gathered}
+	\;^>\tilde{x}_1=G\cdot \;^>x_0+\;^>\varepsilon_{1}\;^>f \hfill \\ 
+	\;^>\tilde{x}_2=G\cdot \;^>\tilde{x}_1+\;^>\varepsilon_{2}\;^>f = G^2\cdot \;^>x_0+(E_n+G)\cdot\;^>f+\;^>\varepsilon_2+G\cdot \;^>\varepsilon_1\hfill \\ 
+	\cdots \\
+	\;^>\tilde{x}_n= G^n\cdot \;^>x_0+(E_n+G+G^2+...+G^{n-1})\cdot\;^>f+\sum\limits_{i=1}^n\;^>\varepsilon_i\cdot G^{n-i}\hfill \\ 
+	\end{gathered}
+\right.
+\end{gather*}
+где $||^>\tilde{\varepsilon}_i||<\varepsilon$ для $i=\overline{1..k}$.\\
+Следовательно, отличие <<настоящего>> $k$-го элемента $^>x_k$ от приближенного $^>\tilde{x}_k$ имеет вид:
+\begin{gather*}
+||\;^>\tilde{x}_k-\;^>x_k||=||\sum\limits_{i=1}^k G^{k-i}\;^>\varepsilon_i|| \leqslant \left(\sum\limits_{j=1}^{k-1}||G^j||\right)\varepsilon < \frac{1}{1-||G||} \varepsilon. 
+\end{gather*}
+Отсюда получаем следующий результат:
+\begin{theorem}
+Метод простой итерации для численного решения СЛАУ вида
+\begin{gather*}
+^>x=G\cdot \; ^>x+\;^>f
+\end{gather*}
+устойчив, то есть при наличии в вычислениях погрешности по норме не более $\varepsilon > 0$ на каждом шаге итерации погрешность на любом шаге итерации имеет вид $c\cdot \varepsilon $, где $c \in \mathbb R_{(+)}$
+\end{theorem}
+
+
 \end{document}
