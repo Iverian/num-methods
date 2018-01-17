@@ -1,0 +1,192 @@
+PWD D:/chm/num-methods/ans
+INPUT C:/Users/ KPACUBO/AppData/Local/MiKTeX/2.9/miktex/data/le/xetex/xelatex.fmt
+INPUT 12.tex
+OUTPUT D:/chm/num-methods/ans/build/12.log
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/subfiles/subfiles.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/subfiles/subfiles.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/verbatim.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/verbatim.sty
+INPUT __main__.tex
+INPUT __main__.tex
+OUTPUT D:/chm/num-methods/ans/build/__preamble__.aux
+INPUT __preamble__.tex
+INPUT __preamble__.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/size12.clo
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/size12.clo
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/xelatex/xetexconfig/geometry.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/xelatex/xetexconfig/geometry.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fontspec/fontspec.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fontspec/fontspec.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3-code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3-code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/unicode-data/UnicodeData.txt
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/unicode-data/CaseFolding.txt
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/unicode-data/SpecialCasing.txt
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/l3xdvipdfmx.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/l3xdvipdfmx.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3packages/xparse/xparse.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3packages/xparse/xparse.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fontspec/fontspec-xetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fontspec/fontspec-xetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/tuenc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/tuenc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/tuenc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fontspec/fontspec.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fontspec/fontspec.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/subfiles/subfiles.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/subfiles/subfiles.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amscls/amsthm.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amscls/amsthm.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amssymb.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amssymb.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/unicode-math/unicode-math.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/unicode-math/unicode-math.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ucharcat/ucharcat.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ucharcat/ucharcat.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fix-cm.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fix-cm.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/filehook/filehook.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/filehook/filehook.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/unicode-math/unicode-math-xetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/unicode-math/unicode-math-xetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/unicode-math/unicode-math-table.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/unicode-math/unicode-math-table.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tensor/tensor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tensor/tensor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/polyglossia.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/polyglossia.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/makecmds/makecmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/makecmds/makecmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/xkeyval/xkeyval.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/xkeyval/xkvutils.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/xetex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/xetex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-generic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-generic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/auxhook.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/auxhook.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/pd1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/pd1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/00miktex/hyperref.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/00miktex/hyperref.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/url/url.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/url/url.sty
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/zapfding/pzdr.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hxetex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hxetex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/puenc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/puenc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/stringenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/stringenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/multicol.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/multicol.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/multirow/multirow.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/multirow/multirow.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/tabularx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/tabularx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/array.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/array.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/booktabs/booktabs.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/booktabs/booktabs.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/comment/comment.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/comment/comment.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/gloss-russian.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/gloss-russian.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/gloss-russian.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/babelsh.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/babelsh.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/gloss-english.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/gloss-english.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/polyglossia/gloss-english.ldf
+INPUT D:/chm/num-methods/ans/build/12.aux
+INPUT D:/chm/num-methods/ans/build/12.aux
+OUTPUT D:/chm/num-methods/ans/build/12.aux
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
+INPUT D:/chm/num-methods/ans/build/12.out
+INPUT D:/chm/num-methods/ans/build/12.out
+INPUT D:/chm/num-methods/ans/build/12.out
+INPUT D:/chm/num-methods/ans/build/12.out
+OUTPUT D:/chm/num-methods/ans/build/12.out
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/se-ascii-print.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/se-ascii-print.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/se-ascii-print.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+OUTPUT D:/chm/num-methods/ans/build/12.xdv
+INPUT D:/chm/num-methods/ans/build/12.aux
