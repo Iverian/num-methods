@@ -3,7 +3,36 @@
 \begin{document}
 
 \qtitle{27}
-Составная квадратурная формула прямоугольников.
+Составная квадратурная формула прямоугольников.\\
 
+Пусть $f_{0}\in C^{1}([c,c+h],\mathbb{R}),$где h>0. Тогда для сетки $<\frac{2c+h}{2}>$, используя интерполяционный полином Лагранжа для сетчатой функции $[f_{0}(\frac{2c+h}{2})>$ получаем :\\
 
+	$f_{0}(r)=[\frac{2c+h}{2}=\theta$ - середина отрезка [c,c+h]] =$f_{0}(\theta)+\frac{f'_{0}(\xi(r))}{1!}(r-\theta)$для r$\in$[c,c+h].\\
+Поэтому 
+\begin{gather}
+	\label{s1}
+	\int_{c+h}^{c}f_{0}(r)dr=\int_{c+h}^{c}f_{0}(\theta)dr+\int_{c+h}^{c}\frac{f'_{0}(\xi(r))}{1!}(r-\theta)dr=f_{0}(\theta)h+r_{0},
+\end{gather}
+где $|r_{\theta}|\leq ||f'_{0}||_{\theta} \int_{c}^{c+h}|r-\theta|dr=||f'_{0\theta}||\frac{h^{2}}{4}$
+Приближенно тогда можем записать
+\begin{gather}
+	\label{s2}
+	 \int_{c+h}^{c}f_{0}(r)dr\approx f_{\theta}h
+	 \end{gather}
+ Выражение \ref{s2} называется формулой Котеса для прямоугольника.\\
+ Пусть  $f_{0}\in C^{1}([a;b],\mathbb{R})$, $B=<\theta_{1},\theta_{2},...\theta_{k}$- центрально-равномерная сетка отрезка [a;b] с шагом stp(B)=$\frac{b-a}{k}=h$ индуцированная равномерной сеткой A=$<r_{0},r_{1},...r_{k}>$ отрезка [a;b] , т.е. $\theta$- середина отрезка $[r_{i-1},r_{i}]$ для i=1..k. Тогда применяя на каждм отрезке формулу \ref{s1} получаем :
+ \begin{gather}
+ 	\label{s3}
+ 	\int_{a}^{b}f(r)dr=\sum_{i=1}^{k}(f(\theta_{i})+r_{\theta_{i}})=h(f(\theta_{1}+...+f(\theta_{k})))+r,
+ 	\end{gather}
+ где $r=\sum_{i=1}^{k}r_{\theta_{i}}$.
+ \begin{gather}
+ 	\label{s4}
+ 	|r|\leq\frac{||f'||}{4}\sum_{i=1}^{k}h^2=[ h=\frac{b-a}{k}, k=\frac{b-a}{h} ]=\frac{||f'|| (b-a)}{4}h
+ 	\end{gather}
+ Таким образом согласно \ref{s3} и \ref{s4} 
+ $$\int_{a}^{b}f(r)dr=h(f(\theta_{1})+f(\theta_{2})+...+f(\theta_{k}))+ o(h)$$,\\
+ 
+ при h$\rightarrow$0 получаем \textbf{квадратурную формулу для прямоугольников}:
+ $$\int_{a}^{b}f(r)dr=h(f(\theta_{1})+f(\theta_{2})+...+f(\theta_{k}))$$
 \end{document}

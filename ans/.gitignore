@@ -3,6 +3,7 @@
 # Compiled pdfs
 *.pdf
 !/img/*.pdf
+build/
 
 # *.svg directory
 svg/
