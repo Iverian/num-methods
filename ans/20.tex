@@ -5,5 +5,39 @@
 \qtitle{20}
 Полное решение спектральной матричной задачи итерационным методом Якоби.
 
+Рассмотрим симметричную матрицу $A = \left(a^i_j\right)^n_n\in L\left(\mathbb{R},n\right).$ Для преобразования в данном итерационном методе ипользуются ортогональные матрицы поворота на некоторый угол $\alpha\in\left[0;2\pi\right)$ вокруг плоскости i-ой и j-той оси системы координат с началом в нулевом векторе и ортонормированном базисе $\left(\;^{>}e_1,\;^{>}e_2,\dots,\;^{>}e_n\right)$, где $\;^{>}e_k=\left[0,\dots,\underset{k-1}{0},\underset{k}{1},\underset{k+1}{0},\dots,0\right),\;k=\overline{1,n}.$
 
+Идея состоит в следующем:
+
+В симметричной матрице выбирается недиагональная компонента $a^\alpha_\beta$ - максимальная по модулю среди других недиагональных компонент. С помощью матриц поворота в плоскости $\left[\;^{>}e_\alpha,\;^{>}e_\beta\right]$ эта компонента зануляется. При этом сумма квадратов компонент матрицы остается неизменной, но сумма квадратов диагональных компонент увеличивается на $2\left(a^\alpha_\beta\right)^2.$ Продолжая неограниченно ьакой процесс, в пределе полуают диагональную матрицу, где на диагонали стоят все СЗ матрицы $A = \left(a^i_j\right)^n_n = A[0]$, т.е. определяют спектр $Spr(A)={\lambda_1,\dots,\lambda_n}.$ Если $Q$ - матрица поворота на k-шаге итерационного процесса, то при достаточно большом $k\in\mathbb{N}:$
+\begin{gather*}
+	Q^T_k\cdot...\cdot Q^T_2\cdot Q^T_1AQ_1\cdot Q_2\cdot...\cdot Q_k=Q^T\cdot A\cdot Q = \\
+=	\begin{pmatrix}
+		\lambda_1 & 0 & \dots & 0 \\
+		0 & \lambda_2 & \dots & 0 \\
+		0 & 0 & \ddots & 0 \\
+		0 & \dots & 0 & \lambda_n
+	\end{pmatrix},\;где\; \prod\limits_{i=1}^kQ_i=Q=<\;^{>}q_1,\;^{>}q_2,\dots,\;^{>}q_n]\in OL\left(\mathbb R,n\right)\\
+	A\;^{>}q_j\approx \lambda_j\;^{>}q_j,\;для\;j=\overline{1,n}.
+\end{gather*}
+
+Таким образом, с помощью итерационного метода Якоби (вращений) получают приближенное полное решение спектральной задачи для симметричной матрицы $A=\left(a^i_j\right)^n_n\in L\left(\mathbb R,n\right).$\\
+
+\begin{proof}
+	Пусть $a^\alpha_\beta$ - максимальная по модулю недиагональная компонента симметричной матрицы $A.$ В плоскости $\left[\;^{>}e_\alpha,\;^{>}e_\beta\right]$ рассмотрим матрицу поворота $Q_1=Q(\phi,\alpha,\beta)$, для которой матрица $A[1]=(b^i_j)^n_n = Q^T\cdot A\cdot Q$
+	\begin{gather*}
+		b^\alpha_\beta = 0 \Rightarrow\\
+		b^\alpha_\alpha =a^\alpha_\alpha\cos^2\varphi+a^\beta_\beta\sin^2\varphi+2a^\alpha_\beta\sin\varphi\cos\varphi;\\
+		b^\beta_\beta =a^\alpha_\alpha\sin^2\varphi+a^\beta_\beta\cos^2\varphi-2a^\alpha_\beta\sin\varphi\cos\varphi;\\
+		b^\alpha_k=b^k_\alpha = a^\alpha_k\cos\varphi+a^\beta_k\sin\varphi,\; k=\overline{1,n};\ne\alpha,\ne\beta\\
+		b^\beta_k=b^k_\beta = -a^\alpha_k\sin\varphi+a^\beta_k\cos\varphi\Longrightarrow\\
+		0=b^\alpha_\beta=b^\beta_\alpha=(a^\beta_\beta-a^\alpha_\alpha)\sin\varphi\cos\varphi+a^\alpha_\beta(\cos^2\varphi-\sin^2\varphi)\Rightarrow\\
+		\varphi=\frac{1}{2}\arctan\frac{a^\alpha_\alpha-a^\beta_\beta}{2a^\alpha_\beta},\; \alpha<\beta
+	\end{gather*}
+Кроме того:
+\begin{gather*}
+	\sum\limits_{i=1}^n(b^i_i)^2 = \sum\limits_{i=1}^n(a^i_i)^2+2(a^\alpha_\beta)^2\Rightarrow\\\;\sum(b^k_m)^2+2\sum[(b^\alpha_k)^2+(b^\beta_k)^2]=\sum(a^k_m)^2+2\sum[(a^\alpha_k)^2+(a^\beta_k)^2],\;k\ne m,\alpha,\beta;m\ne\alpha,\beta\\
+	Но\;(a^\alpha_\alpha)^2+(a^\beta_\beta)^2+2(a^\alpha_\beta)^2=(b^\alpha_\alpha)^2+(b^\beta_\beta)^2
+\end{gather*}
+\end{proof} 
 \end{document}
