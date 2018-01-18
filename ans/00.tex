@@ -8,64 +8,64 @@
 \textbf{Векторы и матрицы}
 
 \begin{itemize}
-	\item 
-	$\;^{>}\mathbb{R} = \lbrace \;^{>}a = 
-	\left(
-	\begin{matrix}
-	a_1 \\
-	a_2 \\
-	... \\
-	a_n
-	\end{matrix} 
-	\right)
-	= [a^1,a^2, ... ,a^n> : a^1, a^2, ... , a^n \in \mathbb{R}
-	\rbrace$ - линейное пространство $\mathbb{R}$ - столбцов высоты $n$.
-	
-	\item 
-	$\;^{<}\mathbb{R} = \lbrace \;^{<}a = < a_1,a_2, ... , a_n ] : a_1, a_2, ... , a_n \in \mathbb{R}
-	\rbrace$ - линейное пространство $\mathbb{R}$ - строк длины $n$.
-	
-	\item
-	$\mathbb{R}^n = \lbrace (a_1, a_2, ... , a_n): a_1, a_2, ... , a_n \in \mathbb{R} \rbrace$ - совокупность $\mathbb{R}$ - кортежей размера $n$
-	
-	\item
-	$L(\mathbb{R}, n, m) = \lbrace A = (a^i_j)^m_n = \left( 
-	\begin{matrix}
-	a^1_1 & a^1_2 & ... & a^1_n \\
-	... & ... & ... & ... \\
-	... & ... & ... & ... \\
-	a^m_1 & a^m_2 & ... & a^m_n
-	\end{matrix}
-	\right): \forall i \in \mathbb{N}_m, \forall j \in \mathbb{N}_n \rightarrow a_j^i \in \mathbb{R} \rbrace$ - линейное пространство $\mathbb{R}$-матриц размера $m \times n$ ($m$ строк, $n$ столбцов).
-	
-	\item
-	$L (\mathbb{R},n,n) = L (\mathbb{R},n)$ - линейное пространство квадратных матриц.
-	
-	\item
-	$OL(\mathbb{R},n) = \lbrace Q \in L(\mathbb{R},n): ^{T}Q \cdot Q = E_n = (\delta ^i_j)^n_n \rbrace$ - группа ортогональных матриц размера $n \times n$.
-	
-	\item
-	$GL(\mathbb{R},n) = \lbrace A \in L(\mathbb{R},n): \det (A) \neq 0 \rbrace$ - группа невырожденных матриц размера $n \times n$.
-	
-	\item
-	$A = (a^i_j)^m_n = < \;^{>}a_1, \;^{>}a_2, ... , \;^{>}a_n] = [\;^{<}a^1, \;^{<}a^2, ... , \;^{<}a_m >$, где $\;^{>}a_j = [a^1_j, a^2_j, ... , a^m_j >$ для $j = \overline{1,n}$, $\;^{<}a^i = < a^i_1, a^i_2, ... , a^i_n]$ для $i = \overline{1,m}$
+  \item
+        $\;^{>}\mathbb{R} = \left\{ \;^{>}a =
+          \left(
+          \begin{matrix}
+              a_1    \\
+              a_2    \\
+              \vdots \\
+              a_n
+            \end{matrix}
+          \right)
+          = \left[a^1,a^2, ... ,a^n\right> : a^1, a^2, ... , a^n \in \mathbb{R}
+          \right\}$ - линейное пространство $\mathbb{R}$ - столбцов высоты $n$.
+
+  \item
+        $\;^{<}\mathbb{R} = \lbrace \;^{<}a = \left< a_1,a_2, ... , a_n \right] : a_1, a_2, ... , a_n \in \mathbb{R}
+          \rbrace$ - линейное пространство $\mathbb{R}$ - строк длины $n$.
+
+  \item
+        $\mathbb{R}^n = \lbrace (a_1, a_2, ... , a_n): a_1, a_2, ... , a_n \in \mathbb{R} \rbrace$ - совокупность $\mathbb{R}$ - кортежей размера $n$
+
+  \item
+        $L(\mathbb{R}, n, m) = \lbrace A = (a^i_j)^m_n = \left(
+          \begin{matrix}
+              a^1_1 & a^1_2 & ... & a^1_n \\
+              ...   & ...   & ... & ...   \\
+              ...   & ...   & ... & ...   \\
+              a^m_1 & a^m_2 & ... & a^m_n
+            \end{matrix}
+          \right): \forall i \in \mathbb{N}_m, \forall j \in \mathbb{N}_n \rightarrow a_j^i \in \mathbb{R} \rbrace$ - линейное пространство $\mathbb{R}$-матриц размера $m \times n$ ($m$ строк, $n$ столбцов).
+
+  \item
+        $L (\mathbb{R},n,n) = L (\mathbb{R},n)$ - линейное пространство квадратных матриц.
+
+  \item
+        $OL(\mathbb{R},n) = \lbrace Q \in L(\mathbb{R},n): ^{T}Q \cdot Q = E_n = (\delta ^i_j)^n_n \rbrace$ - группа ортогональных матриц размера $n \times n$.
+
+  \item
+        $GL(\mathbb{R},n) = \lbrace A \in L(\mathbb{R},n): \det (A) \neq 0 \rbrace$ - группа невырожденных матриц размера $n \times n$.
+
+  \item
+        $A = (a^i_j)^m_n = < \;^{>}a_1, \;^{>}a_2, ... , \;^{>}a_n] = [\;^{<}a^1, \;^{<}a^2, ... , \;^{<}a_m >$, где $\;^{>}a_j = [a^1_j, a^2_j, ... , a^m_j >$ для $j = \overline{1,n}$, $\;^{<}a^i = < a^i_1, a^i_2, ... , a^i_n]$ для $i = \overline{1,m}$
 \end{itemize}
 
 \textbf{Стандартные базисы}
 
 \begin{itemize}
-	\item 
-	$\;^{>}\varepsilon_n = (\;^{>}e_1, \;^{>}e_2, ... , \;^{>}e_n)$ - стандартный базис $\;^{>}\mathbb{R}^n$, $\;^{>}e_j = (\delta^i_j)^n$ для $j \in \mathbb{N}_n$.
-	
-	\item 
-	$\;^{<}\varepsilon_n = (\;^{<}e^1, \;^{<}e^2, ... , \;^{<}e^n)$ - стандартный базис $\;^{<}\mathbb{R}^n$, $\;^{<}e^i = (\delta^i_j)_n$ для $i \in \mathbb{N}_n$.
+  \item
+        $\;^{>}\varepsilon_n = (\;^{>}e_1, \;^{>}e_2, ... , \;^{>}e_n)$ - стандартный базис $\;^{>}\mathbb{R}^n$, $\;^{>}e_j = (\delta^i_j)^n$ для $j \in \mathbb{N}_n$.
+
+  \item
+        $\;^{<}\varepsilon_n = (\;^{<}e^1, \;^{<}e^2, ... , \;^{<}e^n)$ - стандартный базис $\;^{<}\mathbb{R}^n$, $\;^{<}e^i = (\delta^i_j)_n$ для $i \in \mathbb{N}_n$.
 \end{itemize}
 
 \textbf{Умножение векторов и матриц}
 
-$A = < \;^{>}a_1, \;^{>}a_2, ... , \;^{>}a_n ] = (a^i_j)^m_n$
+$A = \left< \;^{>}a_1, \;^{>}a_2, ... , \;^{>}a_n \right] = (a^i_j)^m_n$
 
-$B = [ \;^{<}b^1, \;^{<}b^2, ... , \;^{<}b^k > = (b^p_q)^k_m$
+$B = \left[ \;^{<}b^1, \;^{<}b^2, ... , \;^{<}b^k \right> = (b^p_q)^k_m$
 
 $B \cdot A = (\;^{<}b^p \cdot \;^{>}a_j)^k_n$
 
@@ -82,23 +82,23 @@ $B \cdot A = (\;^{<}b^p \cdot \;^{>}a_j)^k_n$
 Пусть $X \in (X, \lVert \cdot \rVert_X)$ и $Y \in (Y, \lVert \cdot \rVert_Y)$ - два нормированных пространства и $\hat{F} \in Hom(X,Y)$. $Hom_c(X,Y)$ - линейное пространство непрерывных гомоморфизмов из $X$ в $Y$.
 
 \begin{statement}
-	Гомоморфизм непрерывен ($\hat{F} \in Hom_c(X,Y)$) $\Leftrightarrow \hat{F}$ ограничен, т.е. ($\forall x \in X \Rightarrow \lVert \hat{F}(x) \rVert_Y \leqslant c \lVert x \rVert_X$, где $c \geqslant 0$).
+  Гомоморфизм непрерывен ($\hat{F} \in Hom_c(X,Y)$) $\Leftrightarrow \hat{F}$ ограничен, т.е. ($\forall x \in X \Rightarrow \lVert \hat{F}(x) \rVert_Y \leqslant c \lVert x \rVert_X$, где $c \geqslant 0$).
 \end{statement}
 
 \begin{definition}[Подчинённая норма]
-	Если $\hat{F} \in Hom_c(X,Y)$, то подчинённая норма $\lVert \hat{F} \rVert$ имеет вид: $\lVert \hat{F} \rVert = sup \lbrace \lVert \hat{F}(x) \rVert_Y : x \in X и \lVert x \rVert_X = 1 \rbrace$.
+  Если $\hat{F} \in Hom_c(X,Y)$, то подчинённая норма $\lVert \hat{F} \rVert$ имеет вид: $\lVert \hat{F} \rVert = sup \lbrace \lVert \hat{F}(x) \rVert_Y : x \in X и \lVert x \rVert_X = 1 \rbrace$.
 \end{definition}
 
 \begin{statement}
-	$Hom_c(X,Y) = (Hom_c(X,Y), \lVert \cdot \rVert)$ - нормированное пространство, где $\lVert \cdot \rVert$ - подчинённая норма. Если  $Y = (Y, \lVert \cdot \rVert_Y)$ - банахово пространство (любая фундаментальная последовательность сходится), то $Hom_c(X,Y)$ - банахово пространство.
+  $Hom_c(X,Y) = (Hom_c(X,Y), \lVert \cdot \rVert)$ - нормированное пространство, где $\lVert \cdot \rVert$ - подчинённая норма. Если  $Y = (Y, \lVert \cdot \rVert_Y)$ - банахово пространство (любая фундаментальная последовательность сходится), то $Hom_c(X,Y)$ - банахово пространство.
 \end{statement}
 
 \begin{statement}
-	$Hom_c(X, \mathbb{R}) = X*$ - банахово, т.к. $\mathbb{R} = (\mathbb{R}, | \cdot |)$ - банахово.
+  $Hom_c(X, \mathbb{R}) = X*$ - банахово, т.к. $\mathbb{R} = (\mathbb{R}, | \cdot |)$ - банахово.
 \end{statement}
 
 \begin{statement}
-	Если $A = (a^i_j)^m_n$, то $\lVert A \rVert = max \lbrace \sum_{j=1}^{n}| a^i_j | : i=\overline{1,m} \rbrace = \lVert A \rVert_r$
+  Если $A = (a^i_j)^m_n$, то $\lVert A \rVert = max \lbrace \sum_{j=1}^{n}| a^i_j | : i=\overline{1,m} \rbrace = \lVert A \rVert_r$
 \end{statement}
 
 Пусть $A \in L(\mathbb{R},n,m)$, $\hat{A} \in Hom(\;^{>}\mathbb{E}^n, \;^{>}E^m)$ - табличный гомоморфизм. Тогда $\lVert A \rVert_e  = \lVert \hat{A} \rVert = max {\lVert A \;^{>}x \rVert : \lVert \;^{>}x \rVert = 1}$
@@ -106,17 +106,24 @@ $B \cdot A = (\;^{<}b^p \cdot \;^{>}a_j)^k_n$
 $\lVert A \;^{>}x \rVert^2 = \;^{T}(A \;^{>}x) \cdot A \cdot \;^{>}x = \;^{>}x \cdot \;^{T}A \cdot A \cdot \;^{>}x$
 
 \begin{definition}
-	a) $Spr(A) = \lbrace \lambda_1, \lambda_2, ... , \lambda_n \rbrace$ - совокупность собственных значений А. $\rho_{Spr}(A) = max \lbrace |\lambda_1|, |\lambda_2|, ... , |\lambda_n| \rbrace$ - спектральный радиус матрицы А.
-	
-	б) Если $B \in L(\mathbb{R},n)$ - симметрическая матрица, то $Spr(B) \subset \mathbb{R}$ и $B \geqslant 0 (\;^{<}x \cdot B \cdot \;^{>}x \geqslant 0$ для $\forall \;^{>}x \in \;^{>} \mathbb{R})$, то $Spr(B) \subset \mathbb{R}_+ = \lbrace r \in \mathbb{R}, r \geqslant 0 \rbrace$. Кроме того, $B = Q \cdot \left(
-	\begin{matrix}
-	\lambda_1 & 0 & ... & 0 \\
-	0 & \lambda_2 & ... & 0 \\
-	... & ... & ... & ... \\
-	0 & 0 & ... & \lambda_n
-	\end{matrix}
-	\right) \cdot \;^{T}Q$, где $Q = < \;^{>}q_1, \;^{>}q_2, ... , \;^{>}q_n] \in OL(\mathbb{R},n)$
-	$B \cdot \;^{>}q_i = \lambda_i \;^{>}q_i$ для $i=\overline{1,n}$.
+  \begin{itemize}
+    (а)
+    $\operatorname{Spr}(A)=\{\lambda_1,\lambda_2,\dots,\lambda_n\}$ -- совокупность собственных значений А. $\rho_{\operatorname{Spr}}(A)=\operatorname{max}\{|\lambda_1|,|\lambda_2|,\dots,|\lambda_n|\}$ -- спектральный радиус матрицы А;
+    (б)
+    Если $B\in L(\mathbb{R},n)$ -- симметрическая матрица, то $\operatorname{Spr}(B)\subset\mathbb{R}$ и $B \geqslant 0 (\;^{<}x \cdot B \cdot \;^{>}x \geqslant 0$ для $\forall \;^{>}x \in \;^{>} \mathbb{R})$, то $Spr(B) \subset \mathbb{R}_+ = \lbrace r \in \mathbb{R}, r \geqslant 0 \rbrace$. Кроме того,
+    \begin{gather*}
+    B = Q \cdot \left(
+    \begin{matrix}
+        \lambda_1 & 0         & ... & 0         \\
+        0         & \lambda_2 & ... & 0         \\
+        ...       & ...       & ... & ...       \\
+        0         & 0         & ... & \lambda_n
+      \end{matrix}
+    \right) \cdot \;^{T}Q,
+    \end{gather*}
+    где $Q = \left< \;^{>}q_1, \;^{>}q_2, ... , \;^{>}q_n \right] \in OL(\mathbb{R},n)$
+    $B \cdot \;^{>}q_i = \lambda_i \;^{>}q_i$ для $i=\overline{1,n}$.
+  \end{itemize}
 \end{definition}
 
 \end{document}

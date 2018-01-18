@@ -6,76 +6,80 @@
 Метод прогонки для СЛАУ с трёх-диагональной матрицей.
 
 \begin{definition}
-	Говорят, что матрица $A = (a^i_j)^n_n \in L(\mathbb{R},n)$ имеет диагональное преобразование, если $diag(A) = min\lbrace |a^i_i| - \sum_{j=1, j \neq i}^{n} |a^i_j|: i = \overline{1,n} \rbrace > 0$.		
+    Говорят, что матрица $A = (a^i_j)^n_n \in L(\mathbb{R},n)$ имеет диагональное преобразование, если $diag(A) = min\lbrace |a^i_i| - \sum_{j=1, j \neq i}^{n} |a^i_j|: i = \overline{1,n} \rbrace > 0$.
 \end{definition}
 
 \begin{theorem}
-	Пусть матрица $A \in L(\mathbb{R},n)$ имеет диагональное преобразование $diag(A) > 0$. Тогда $A \in GL(\mathbb{R},n)$ и $\lVert A^{-1} \rVert \leqslant \frac{1}{diag(A)}$.
+    Пусть матрица $A \in L(\mathbb{R},n)$ имеет диагональное преобразование $diag(A) > 0$. Тогда $A \in GL(\mathbb{R},n)$ и $\lVert A^{-1} \rVert \leqslant \frac{1}{diag(A)}$.
 \end{theorem}
 
 \begin{proof}
-	Рассмотрим совместную СЛАУ
-	\begin{equation}
-	\llabel{2_1}
-	A \cdot \;^{>}x = \;^{>}b.
-	\end{equation}
-	где $\;^{>}x \in \;^{>}\mathbb{R}^n$ - решение СЛАУ \lref{2_1}, где 
-	\begin{equation}
-	\llabel{2_2}
-	\lVert \;^{>}x \rVert = max \lbrace |x^1|, |x^2|, ... , |x^n| \rbrace = |x^j|, j \in \mathbb{N}_n = <1, 2, ..., n>.
-	\end{equation}
-	Представим СЛАУ \lref{2_1} в виде:
-	\begin{gather}
-	\llabel{2_3}
-	\begin{cases}
-	a^1_1 x^1 = b^1 - \sum_{k=2}^{n} a^1_k x^k \\
-	a^2_2 x^2 = b^2 - \sum_{k=1, k\neq 2}^{n} a^2_k x^k \\
-	...\\
-	a^n_n x^n = b^n - \sum_{k=1}^{n-1} a^n_k x^k	
-	\end{cases}
-	\end{gather}
-	Из \lref{2_3} получаем 
-	\begin{gather*}
-	\begin{cases}
-	|a^1_1| |x^1| \leqslant |b^1| + \sum_{k=2}^{n} |a^1_k| |x^k| \\
-	|a^2_2| |x^2| \leqslant |b^2| + \sum_{k=1,k \neq 2}^{n} |a^2_k| |x^k| \\
-	... \\
-	|a^n_n| |x^n| \leqslant |b^n| + \sum_{k=1}^{n-1} |a^n_k| |x^k|
-	\end{cases}
-	\end{gather*}
-	Преобразуем:
-	\begin{gather*}
-	\begin{cases}
-	|a^1_1| |x^1| - \sum_{k=2}^{n} |a^1_k| |x^k| \leqslant |b^1| \\
-	|a^2_2| |x^2| - \sum_{k=1,k \neq 2}^{n} |a^2_k| |x^k| \leqslant |b^2| \\
-	... \\
-	|a^n_n| |x^n| - \sum_{k=1}^{n-1} |a^n_k| |x^k| \leqslant |b^n|
-	\end{cases}
-	\end{gather*}
-	
-	Из \lref{2_2} и $|a^j_j| - \sum_{k=1,k\neq j}^{n} |a^j_k| \geqslant diag(A) \Rightarrow (|a^j_j| - \sum_{k=1,k \neq j}^{n} |a^j_k|) \cdot \lVert \;^{>}x \rVert \leqslant |b^j|$
-	Если $\;^{>}b = \;^{>}O_n$, то отсюда следует (т.к. $diag(A)>0$), что $\;^{>}x = \;^{>}O_n$, т.е. $\det(A) \neq 0$ и $\exists A^{-1}$. Кроме того, отсюда следует неравенство: 
-	\begin{equation}
-	\llabel{2_4}
-	\lVert \;^{>}x \rVert \geqslant \frac{1}{diag(A)} \cdot \lVert \;^{>}b \rVert
-	\end{equation}
-	
-	С другой стороны $\;^{>}x = A^{-1} \;^{>}b$.
-	
-	Если $\lVert \;^{>}b \rVert = 1$, то из \lref{2_4} следует $\lVert \;^{>}x \rVert \leqslant \frac{1}{diag(A)} \Rightarrow \lVert A^{-1} \rVert \leqslant \frac{1}{diag(A)}$, т.к. $\lVert A^{-1} \rVert = max \lbrace \lVert A^{-1} \;^{>}b \rVert : \lVert \;^{>}b \rVert = 1 \rbrace$
+    Рассмотрим совместную СЛАУ
+    \begin{equation}
+        \llabel{2_1}
+        A \cdot \;^{>}x = \;^{>}b.
+    \end{equation}
+    где $\;^{>}x \in \;^{>}\mathbb{R}^n$ - решение СЛАУ \lref{2_1}, где
+    \begin{equation}
+        \llabel{2_2}
+        \lVert \;^{>}x \rVert = max \lbrace |x^1|, |x^2|, ... , |x^n| \rbrace = |x^j|, j \in \mathbb{N}_n = <1, 2, ..., n>.
+    \end{equation}
+    Представим СЛАУ \lref{2_1} в виде:
+    \begin{gather}
+        \llabel{2_3}
+        \begin{cases}
+            a^1_1 x^1 = b^1 - \sum_{k=2}^{n} a^1_k x^k          \\
+            a^2_2 x^2 = b^2 - \sum_{k=1, k\neq 2}^{n} a^2_k x^k \\
+            ...                                                 \\
+            a^n_n x^n = b^n - \sum_{k=1}^{n-1} a^n_k x^k
+        \end{cases}
+    \end{gather}
+    Из \lref{2_3} получаем
+    \begin{gather*}
+        \begin{cases}
+            |a^1_1| |x^1| \leqslant |b^1| + \sum_{k=2}^{n} |a^1_k| |x^k|          \\
+            |a^2_2| |x^2| \leqslant |b^2| + \sum_{k=1,k \neq 2}^{n} |a^2_k| |x^k| \\
+            ...                                                                   \\
+            |a^n_n| |x^n| \leqslant |b^n| + \sum_{k=1}^{n-1} |a^n_k| |x^k|
+        \end{cases}
+    \end{gather*}
+    Преобразуем:
+    \begin{gather*}
+        \begin{cases}
+            |a^1_1| |x^1| - \sum_{k=2}^{n} |a^1_k| |x^k| \leqslant |b^1|          \\
+            |a^2_2| |x^2| - \sum_{k=1,k \neq 2}^{n} |a^2_k| |x^k| \leqslant |b^2| \\
+            ...                                                                   \\
+            |a^n_n| |x^n| - \sum_{k=1}^{n-1} |a^n_k| |x^k| \leqslant |b^n|
+        \end{cases}
+    \end{gather*}
+
+    Из \lref{2_2} и $|a^j_j| - \sum_{k=1,k\neq j}^{n} |a^j_k| \geqslant diag(A) \Rightarrow (|a^j_j| - \sum_{k=1,k \neq j}^{n} |a^j_k|) \cdot \lVert \;^{>}x \rVert \leqslant |b^j|$
+    Если $\;^{>}b = \;^{>}O_n$, то отсюда следует (т.к. $diag(A)>0$), что $\;^{>}x = \;^{>}O_n$, т.е. $\det(A) \neq 0$ и $\exists A^{-1}$. Кроме того, отсюда следует неравенство:
+    \begin{equation}
+        \llabel{2_4}
+        \lVert \;^{>}x \rVert \geqslant \frac{1}{diag(A)} \cdot \lVert \;^{>}b \rVert
+    \end{equation}
+
+    С другой стороны $\;^{>}x = A^{-1} \;^{>}b$.
+
+    Если $\lVert \;^{>}b \rVert = 1$, то из \lref{2_4} следует $\lVert \;^{>}x \rVert \leqslant \frac{1}{diag(A)} \Rightarrow \lVert A^{-1} \rVert \leqslant \frac{1}{diag(A)}$, т.к. $\lVert A^{-1} \rVert = max \lbrace \lVert A^{-1} \;^{>}b \rVert : \lVert \;^{>}b \rVert = 1 \rbrace$
 \end{proof}
 
 \begin{definition}
-	Матрица $A \in L (\mathbb{R},n)$ называют трёхдиагональной, если $A = \left(
-	\begin{matrix}
-	b_1 & c_1 & 0 & 0 & ... & 0 \\
-	a_2 & b_2 & c_2 & 0 &... & 0 \\
-	0 & a_3 & b_3 & c_3 & ... & 0 \\
-	... & ... & ... & ... & ... & ...\\
-	0 & ... & 0 & a_{n-1} & b_{n-1} & c_{n-1} \\
-	0 & ... & 0 & 0 & a_{n} & b_{n}
-	\end{matrix}
-	\right)$
+    Матрица $A \in L (\mathbb{R},n)$ называют трёхдиагональной, если
+    $$
+        A =
+        \left(
+        \begin{matrix}
+                b_1 & c_1 & 0   & 0       & ...     & 0       \\
+                a_2 & b_2 & c_2 & 0       & ...     & 0       \\
+                0   & a_3 & b_3 & c_3     & ...     & 0       \\
+                ... & ... & ... & ...     & ...     & ...     \\
+                0   & ... & 0   & a_{n-1} & b_{n-1} & c_{n-1} \\
+                0   & ... & 0   & 0       & a_{n}   & b_{n}
+            \end{matrix}
+        \right)
+    $$
 \end{definition}
 
 \textbf{Метод прогонки}
@@ -84,35 +88,35 @@
 
 \textit{A) Прямой ход}
 \begin{enumerate}
-	\item 
-	Из первого уравнения $b_1 x^1 + c_1 x^2 =y^1 \Rightarrow x^1 = \frac{y^1 - c_2 x^2}{b^1} \Rightarrow x^1 = L_1 x^2 + M_1$, где $L_1 = - \frac{c_1}{b_1}$ и $M_1 = \frac{y^1}{b_1}$
-	
-	\item 
-	Выражение $x^1 = L_1 x^2 + M_1$ подставим во второе уравнение слау и выражаем $x^2 = L_2 x^3 + M_2$
-	
-	\item
-	Выражение $x^2 = L_2 x^3 + M_2$ подставляем в третье уравнение и получаем $x^3 = L_3 x^4 + M_3$
-	
-	...
-	
-	\item[n-1.]
-	Получаем $x^{n-1} = L_{n-1} x^n + M_{n-1}$
-	
-	\item[n.]
-	Подставляем $x^{n-1} = L_{n-1} x^n + M_{n-1}$ в n-е уравнение и $x^n = M_n$
-\end{enumerate} 
+    \item
+          Из первого уравнения $b_1 x^1 + c_1 x^2 =y^1 \Rightarrow x^1 = \frac{y^1 - c_2 x^2}{b^1} \Rightarrow x^1 = L_1 x^2 + M_1$, где $L_1 = - \frac{c_1}{b_1}$ и $M_1 = \frac{y^1}{b_1}$
+
+    \item
+          Выражение $x^1 = L_1 x^2 + M_1$ подставим во второе уравнение слау и выражаем $x^2 = L_2 x^3 + M_2$
+
+    \item
+          Выражение $x^2 = L_2 x^3 + M_2$ подставляем в третье уравнение и получаем $x^3 = L_3 x^4 + M_3$
+
+          ...
+
+    \item[n-1.]
+          Получаем $x^{n-1} = L_{n-1} x^n + M_{n-1}$
+
+    \item[n.]
+          Подставляем $x^{n-1} = L_{n-1} x^n + M_{n-1}$ в n-е уравнение и $x^n = M_n$
+\end{enumerate}
 
 \textit{Б) Обратный ход при известном $x^n = M_n$}
 \begin{enumerate}
-	\item[n-1.]
-	Из (n-1) находим $x^{n-1} = L_{n-1} x^n + M_{n-1}$
-	
-	\item[n-2.]
-	Из (n-2) находим $x^{n-2} = L_{n-2} x^{n-1} + M_{n-2}$
-	
-	...
-	
-	\item[1.]
-	Из (1) находим $x^{1} = L_{1} x^{2} + M_{1}$
+    \item[n-1.]
+          Из (n-1) находим $x^{n-1} = L_{n-1} x^n + M_{n-1}$
+
+    \item[n-2.]
+          Из (n-2) находим $x^{n-2} = L_{n-2} x^{n-1} + M_{n-2}$
+
+          ...
+
+    \item[1.]
+          Из (1) находим $x^{1} = L_{1} x^{2} + M_{1}$
 \end{enumerate}
 \end{document}
