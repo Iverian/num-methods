@@ -3,6 +3,53 @@
 \begin{document}
 
 \qtitle{45}
-Метод Галёркина-Петрова для численного решения линейного уравнения в гильбертовом пространстве, пример численного решения линейного интегрального уравнения Фредгольма II-рода с аналитически заданным непрерывным ядром интегрального оператора этого уравнения.
+Метод Галёркина-Петрова для численного решения линейного уравнения в гильбертовом пространстве, пример численного решения линейного интегрального уравнения Фредгольма II-рода с аналитически заданным непрерывным ядром интегрального оператора этого уравнения.\\
+
+Рассмотрим интегральное уравнение Фредгольма 2-го рода:
+\begin{gather}
+\varepsilon[y(x)]
+\equiv
+y(x)-\lambda\int\limits_a^b K(x,t)y(t)dt - f(x) = 0,
+\label{45:eq}
+\end{gather}
+приближенное решение будем искать в виде функций:
+\begin{gather}
+Y_n(x)=f(x)+\sum_{i=1}^{n}a_i\varphi_i(x),
+\label{45:sol}
+\end{gather}
+с вектором свободных параметров ${^>a}=\left[a_1,\dots,a_n\right>$ и заданной системой ЛНЕЗ функций $\left\{\varphi_i(x)\right\}^n$. Подставляя (\ref{45:sol}) в (\ref{45:eq}), получим невязку:
+\begin{gather}
+\varepsilon[Y_n(x)]
+=
+\sum_{i=1}^{n}a_i\left[\varphi_i(x)-\lambda\int\limits_{a}^{b}K(x,t)\varphi_i(t)dt\right] - \lambda\int\limits_{a}^{b}K(x,t)f(t)dt,
+\label{45:nev}
+\end{gather}
+в случае точного решения невязка равна нулю, поэтому параметры ${^>a}$ подбираются так, чтобы минимизировать итоговую невязку, если
+\begin{gather}
+\lim\limits_{n\rightarrow\infty}Y_n(x)=y(x),
+\end{gather}
+то взяв достаточно большое число параметров, можно найти решение $y(x)$ с любой наперед заданной точностью.
+
+Согласно методу Галеркина - Петрова, компоненты ${^>a}$ определяются из ортогональности невязки функциям $\varphi_i(x)$:
+\begin{gather}
+\int\limits_{a}^{b}\varepsilon[Y_n(x)]\varphi_i(x)dx=0
+\end{gather}
+или из (\ref{45:nev}):
+\begin{gather}
+\sum_{i=1}^{n}(f_{ij}-\lambda b_{ij})a_j = \lambda c_i
+\Longrightarrow
+(A-\lambda B){^>a} = \lambda{^>c}
+\end{gather}
+где
+\begin{flalign}
+&
+f_{ij}
+=
+\int\limits_{a}^{b}\varphi_i(x)\varphi_j(x)dx,\\
+&
+b_{ij}=\int\limits_{a}^{b}\int\limits_{a}^{b}K(x,t)\varphi_i(x)\varphi_j(t)dtdx,\\
+&
+c_i=\int\limits_{a}^{b}\int\limits_{a}^{b}K(x,t)\varphi_i(x)f(t)dtdx,
+\end{flalign}
 
 \end{document}

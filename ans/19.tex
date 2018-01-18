@@ -3,7 +3,35 @@
 \begin{document}
 
 \qtitle{19}
-Метод приближённого вычисления максимального по модулю собственного значения и отвечающего ему собственного вектора для квадратной матрицы, имеющий действительный спектр.
+Метод приближённого вычисления максимального по модулю собственного значения и отвечающего ему собственного вектора для квадратной матрицы, имеющий действительный спектр.\\
+
+Пусть $Spr(A) = < \lambda_1, \lambda_2, \dots, \lambda_k > \subset \mathbb{R}$, где $|\lambda_1| > |\lambda_2| > \dots > |\lambda_k|$, и $\;^{>}h_i$ - собственный вектор матрицы $A$, отвечающий собственному значению $\lambda_i, i = \overline{1\dots k}.$
+
+Рассмотрим верктор:
+\begin{gather*}
+	\begin{cases}
+		\;^{>}x_0 = \alpha^1\;^{>}h_1+\alpha^2\;^{>}h_2+\cdots+\alpha^k\;^{>}h_k \\
+		\alpha^1\ne 0 \;( \alpha^1, \alpha^2, \dots, \alpha^k \in \mathbb{R})\\
+		A\;^{>}h_i = \lambda_i\;^{>}h_i\;для\;i=\overline{1,k}
+	\end{cases}
+\end{gather*}
 
 
+Из системки следует, что для $m\in\mathbb{N}:$
+\begin{gather*}
+	A^m\;^{>}x_0 = \lambda^{m}_1\cdot\alpha^1\;^{>}h_1+\lambda^{m}_2\cdot\alpha^2\;^{>}h_2+\dots+\lambda^m_k\cdot\alpha^k\;^{>}h_k=\\
+	\lambda^m_1\left(\alpha^1\;^{>}h_1+
+	\left(\frac{\lambda_2}{\lambda_1}\right)^m\cdot\alpha^2\;^{>}h_2+\dots+
+	\left(\frac{\lambda_k}{\lambda_1}\right)^m\cdot\alpha^k\;^{>}h_k\right),\;где\; \left|\frac{\lambda_i}{\lambda_1}\right|<1,\;i=\overline{2,k}
+\end{gather*}
+
+Следовательно при $\lim\limits_{m\rightarrow\infty}\;^{>}y_m = \lim\limits_{m\rightarrow\infty} \frac{A^m\;^{>}x_0}{\|A^m\;^{>}x_0\|}=
+\frac{\alpha^1\;^{>}h_1}{\|\alpha^1\;^{>}h_1\|}$ - СВ матрицы $A$, отвечающий СЗ $\lambda_1.$ Тогда итерационный метод с рабочей формулой:
+\begin{gather*}
+	\;^{>}y_m = A\;^{>}y_{m-1},\;m\in\mathbb{N},\;^{>}y_0 = \frac{\;^{>}x_0}{\|\;^{>}x_0\|}
+\end{gather*}
+позволяет приближенно найти $\frac{\alpha^1\;^{>}h_1}{\|\alpha^1\;^{>}h_1\|}$ - CB матрицы $A$,отвечающий наибольшему оп модулю СЗ $\lambda_1.$ Тогда при достаточно больших $m\in\mathbb{N}:$
+\begin{gather*}
+	\;^{>}y_m \approx \frac{\alpha^1\;^{>}h_1}{\|\alpha^1\;^{>}h_1\|}\;\;и\;\;A\;^{>}y_m \approx \lambda_1\;^{>}y_m
+\end{gather*}
 \end{document}
