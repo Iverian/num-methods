@@ -19,18 +19,18 @@
 	Рассмотрим СЛАУ $A ^>x = ^>b$, $A\in GL(R,n), ^>b\in ^>R^n$- заданы и $^>x=A^{-1}* ^>b$\\
 	Вместо этой СЛАУ обычно дана:
 	
-	$$A* ^>x= ^>b + \triangle^> b$$
+	$$A* ^>x= ^>b + \Delta^> b$$
 	
-	где $^>\triangle b \in R^n$ и $\delta=\frac{\vert\vert\triangle^> b\vert\vert}{\vert\vert ^>b\vert\vert}$- относительная погрешность в правой части СЛАУ.\\
+	где $^>\Delta b \in R^n$ и $\delta=\frac{\vert\vert\Delta^> b\vert\vert}{\vert\vert ^>b\vert\vert}$- относительная погрешность в правой части СЛАУ.\\
 	Решение СЛАУ имеет вид:
 	
-	$$^>x=^>x + \triangle^> x$$
+	$$^>x=^>x + \Delta^> x$$
 	
-	где $A \triangle^> x=  \triangle^> b$, т.е.$\vert\vert A^{-1} \triangle b \vert\vert \leq \vert\vert A^{-1}\vert\vert *\vert\vert \triangle^> b\vert\vert$\\
+	где $A \Delta^> x=  \Delta^> b$, т.е.$\vert\vert A^{-1} \Delta b \vert\vert \leq \vert\vert A^{-1}\vert\vert *\vert\vert \Delta^> b\vert\vert$\\
 	Но $^>b=A ^>x$,т.е. $\vert\vert ^>b\vert\vert \leq \vert\vert A\vert\vert*\vert\vert^>x\vert\vert \Rightarrow \vert\vert ^>x\vert\vert \geq \frac{\vert\vert^>b\vert\vert}{\vert\vert A \vert\vert}$\\
-	Следовательно, $\frac{\triangle^> x}{^>x}\leq \frac{\vert\vert A^{-1}\vert\vert * \vert\vert \triangle^> b \vert\vert}{\vert\vert ^>b \vert\vert \vert\vert A\vert\vert}=\vert\vert A^{-1}\vert\vert * \vert\vert A \vert\vert * \frac{\vert\vert \triangle^> b\vert\vert}{\vert\vert ^>b \vert\vert}= cond(A)*\frac{\vert\vert \triangle^> b\vert\vert}{\vert\vert ^>b \vert\vert}$\\
+	Следовательно, $\frac{\Delta^> x}{^>x}\leq \frac{\vert\vert A^{-1}\vert\vert * \vert\vert \Delta^> b \vert\vert}{\vert\vert ^>b \vert\vert \vert\vert A\vert\vert}=\vert\vert A^{-1}\vert\vert * \vert\vert A \vert\vert * \frac{\vert\vert \Delta^> b\vert\vert}{\vert\vert ^>b \vert\vert}= cond(A)*\frac{\vert\vert \Delta^> b\vert\vert}{\vert\vert ^>b \vert\vert}$\\
 	Таким образом 
 	
-	$$\frac{\vert\vert  \triangle^> x \vert\vert}{\vert\vert ^>x\vert\vert}\leq cond(A)*\frac{\vert\vert \triangle^> b\vert\vert}{\vert\vert ^>b \vert\vert}$$
+	$$\frac{\vert\vert  \Delta^> x \vert\vert}{\vert\vert ^>x\vert\vert}\leq cond(A)*\frac{\vert\vert \Delta^> b\vert\vert}{\vert\vert ^>b \vert\vert}$$
 \end{definition}
 \end{document}
