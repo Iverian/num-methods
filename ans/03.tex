@@ -5,5 +5,17 @@
 \qtitle{03}
 Чебышёвская и евклидова норма матрицы, погрешность матричного преобразования приближённого вектора.
 
+\begin{definition}[Чебышевская норма]
+	Пусть $\vert\vert \bullet \vert\vert_C$ - чебышевская норма в пространстве  $^>R=(^>R^n, \vert\vert \bullet \vert\vert_C)$, то есть $\vert\vert a\vert\vert_r=max\lbrace \vert a^1 \vert,...,\vert a^n \vert \rbrace$, если $^>a=<a^1,..,a^n>\in ^>R^n$\\
+	Для банаховой алгебры $L(R,n)=(L(R,n;\vert\vert\bullet\vert\vert)),$ где $\vert\vert\bullet\vert\vert$ - подчиненная норма матриц относительно чебышевской нормы в $^>R^n$, получаем для $A=(a^{i}_j)^{n}_{n}\in L(R,n)$:
+	$$\vert\vert A \vert\vert=max\lbrace\sum_{j=1}^{n}\vert a_{j}^{i}\vert:i=\overline{1,n}\rbrace$$
+\end{definition}
 
+\begin{definition}[Евклидова норма]
+	$^>E^n=(^>R^n,\vert\vert \bullet \vert\vert_e)$ - стандартное евклидово арифметическое пространство, где $\vert\vert ^>x \vert\vert=\sqrt{^<x*^>x}$ для $ ^>x=\lbrack x^1,..,x^n> \in ^>R^n \vert ^<x=<x^1,..,x^n \rbrack \in ^<R^n  (\vert\vert ^>x \vert\vert-$длина $^>x\in E^n )$
+\end{definition}
+
+\begin{definition}[Погрешность матричного преобразования приближённого вектора]
+	$A\in L(R,n,m), ^>x\in X = (^>R^n;\vert\vert\bullet\vert\vert_x), A ^>x \in X=(R^m,\vert\vert\bullet\vert\vert_x), \vert\vert ^>x\vert\vert_x \leq \epsilon$. Тогда $\vert\vert A* ^>x\vert\vert_x \leq \vert\vert A\vert\vert *\vert\vert ^>x\vert\vert_x \leq \vert\vert A \vert\vert * \epsilon$
+\end{definition}
 \end{document}
