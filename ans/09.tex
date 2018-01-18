@@ -4,140 +4,115 @@
 
 \qtitle{09}
 Многомерная модель линейной регрессии.\\
-
 Эта модель имеет вид:
 \begin{gather}
-    \llabel{9:1}
-    y = \alpha_0+\alpha_1x_1 + \alpha_2x_2 + ... + \alpha_kx_k + \epsilon
+\llabel{9:1}
+y = \alpha_0+\alpha_1x_1 + \alpha_2x_2 + ... + \alpha_kx_k + \epsilon
 \end{gather}
-где $^>\alpha = [\alpha_0,\alpha_1...\alpha_k>$ - вектор неизвестных параметров тренда $\widetilde{y} = \alpha_0 + \alpha_1x_1+...+\alpha_kx_k$ модели \lref{9:1} и $\epsilon \sim N(0,\sigma)$ - случайная составленная модель \lref{9:1}.
+где $^>\alpha = [\alpha_0,\alpha_1...\alpha_k>$ - вектор неизвестных параметров тренда $\widetilde{y} = \alpha_0 + \alpha_1x_1+...+\alpha_kx_k$ модели \lref{9:1} и $\epsilon \sim N(0,\sigma)$ - случайная составленная модель \lref{9:1}.\\
 
 \begin{gather}
-    ^<x^1 = <x_1^1,x_2^1,...,x_k^1]\\
-    ^<x^2 = <x_1^2,x_2^2,...,x_k^2]\\
-    ^<x^n = <x_1^n,x_2^n,...,x_k^n]
+^<x^1 = <x_1^1,x_2^1,...,x_k^1]\\
+^<x^2 = <x_1^2,x_2^2,...,x_k^2]\\
+^<x^n = <x_1^n,x_2^n,...,x_k^n]
 \end{gather}
-
-В эксперименте для $n>k+1$ значений факторов $x_1...x_k$ модели \lref{9:1} измеряют соответствующие значения $y_1...y_n$ модели \lref{9:1}. Эти данные представляют в виде таблицы
-
+В эксперименте для $n>k+1$ значений факторов $x_1...x_k$ модели \lref{9:1} измеряют соответствующие значения $y_1...y_n$ модели \lref{9:1}.\\
+Эти данные представляют в виде таблицы
 \begin{gather}
-    \llabel{9:2}
-    \begin{array}{crrrr}
-        i & x_1   & x_2   & ... & x_ky     \\
-        1 & x_1^1 & x_2^1 & ... & x_k^1y_1 \\
-        2 & x_1^2 & x_2^2 & ... & x_k^2y_2 \\
-        ...                                \\
-        n & x_1^n & x_2^n & ... & x_k^ny_n \\
-    \end{array}
+\llabel{9:2}
+\begin{tabular}{crrrr}
+i & $x_1$ & $x_2$ & ... &$x_ky$\\
+1 & $x_1^1$ & $x_2^1$ & ... & $x_k^1y_1$\\
+2 & $x_1^2$ & $x_2^2$ & ... & $x_k^2y_2$\\
+...\\
+n & $x_1^n$ & $x_2^n$ & ... & $x_k^ny_n$\\
+\end{tabular}
 \end{gather}
-
-Из модели \lref{9:1} и таблицы \lref{9:2} получают для оценки $^>\alpha$ приближенную СЛАУ:
-
+Из модели \lref{9:1} и таблицы \lref{9:2} получают для оценки $^>\alpha$ приближенную СЛАУ:\\
 \begin{gather}
-    \llabel{9:6}
-    \begin{cases}
-        \alpha_0+\alpha_1x_1^1+...+\alpha_kx_k^k = y_1 \\
-        ...                                            \\
-        \alpha_0+\alpha_1x_1^n+...+\alpha_kx_k^n = y_n \\
-    \end{cases}
-    \Longleftrightarrow X\cdot ^>\alpha = ^>y\\
+\llabel{9:6}
+\begin{cases}
+\alpha_0+\alpha_1x_1^1+...+\alpha_kx_k^k = y_1\\
+...\\
+\alpha_0+\alpha_1x_1^n+...+\alpha_kx_k^n = y_n\\
+\end{cases}
+\Longleftrightarrow X\cdot ^>\alpha = ^>y\\
 \end{gather}
-
 \begin{gather}
-    \llabel{9:3}
-    X =
-    \begin{pmatrix}
-        1 & x_1^1 & ... & x_k^1 \\
-        1 & x_1^2 & ... & x_k^2 \\
-        ...                     \\
-        1 & x_1^n & ... & x_k^n
-    \end{pmatrix}
-    \qquad ^>y =
-    \begin{pmatrix}
-        y_1 \\
-        ... \\
-        y_n
-    \end{pmatrix}
+\llabel{9:3}
+X = 
+\begin{pmatrix}
+1 & x_1^1 & ... & x_k^1\\
+1 & x_1^2 & ... & x_k^2\\
+...\\
+1 & x_1^n & ... & x_k^n
+\end{pmatrix}
+\qquad ^>y = \begin{pmatrix}
+y_1\\
+...\\
+y_n
+\end{pmatrix}
 \end{gather}
-
-В качестве оценки $^>\hat{\alpha}$ СЛАУ \lref{9:3} выбирается решение задачи:
-
+В качестве оченки $^>\hat{\alpha}$ СЛАУ \lref{9:3} выбирается решение задачи:\\
 \begin{gather}
-    \llabel{9:4}
-    y(^>\alpha) = || X ^>\alpha - ^>\alpha||^2_e \to min
+\llabel{9:4}
+y(^>\alpha) = || X ^>\alpha - ^>\alpha||^2_e \to min
 \end{gather}
 где
-\begin{flalign*}
-    ||X {^>\alpha} - {^>y}||^2
-    =&
-    \left< X {^>\alpha} - {^>y}; X{^>\alpha} - {^>y}\right>_e
-    =
-    {^T}(X {^>\alpha} - {^>y})(X{^>\alpha} - {^>y})
-    =\\
-    =&
-    ({^>\alpha}{^TX} - {^<y})(X{^>\alpha}-{^>y})
-    =\\
-    =&
-    {^<\alpha}{^TX}X{^>\alpha}{^>\alpha}{^TX}{^>y} - ^>y X ^>\alpha + ||^>y||^2_e
-    =\\
-    =&
-    ^>\alpha ^TX X ^>\alpha - 2^<\alpha ^+X ^>y + ||^>y||^2_e
-\end{flalign*}
+\begin{gather}
+||X ^>\alpha - ^>y||^2 = \left<X ^>\alpha - ^>y; X ^>\alpha - ^>y\right>_e = ^T(X ^>\alpha - ^>y)(X ^>\alpha - ^>y) = \\ (^>\alpha ^TX - ^<y)(X ^>\alpha - ^>y) = ^<\alpha ^TX X ^>\alpha ^>\alpha ^TX ^>\y - ^>y X ^>\alpha + ||^>y||^2_e = ^>\alpha ^TX X ^>\alpha - 2^<\alpha ^+X ^>y + ||^>y||^2_e
+\end{gather}
 Отсюда для решения задачи \lref{9:4} получают СЛАУ:
 \begin{gather}
-    \begin{cases}
-        \llabel{9:5}
-        \frac{\partial y}{\partial \alpha_0} = 0 \\
-        ...                                      \\
-        \frac{\partial y}{\partial \alpha_k} = 0
-    \end{cases}
-    \Longleftrightarrow 2 ^TX X ^>\alpha - 2 ^TX ^>y = ^>0_k \Longleftrightarrow ^TX X ^>\alpha = ^TX ^>y
+\begin{cases}
+\llabel{9:5}
+\frac{\partial y}{\partial \alpha_0} = 0\\
+...\\
+\frac{\partial y}{\partial \alpha_k} = 0
+\end{cases}
+\Longleftrightarrow 2 ^TX X ^>\alpha - 2 ^TX ^>y = ^>0_k \Longleftrightarrow ^TX X ^>\alpha = ^TX ^>y
 \end{gather}
-
 СЛАУ \lref{9:5} называется нормалью для СЛАУ \lref{9:6}.\\
 Если $rang(X) = k , n>k+1$, то $^TX X \in GL(R,k)$.\\
 В качестве оценки решения СЛАУ \lref{9:10} выбирается МНК- решение СЛАУ \lref{9:10}, то есть решение СЛАУ \lref{9:5}:\\
 \begin{gather}
-    \llabel{9:7}
-    \begin{matrix}
-        \hat{\alpha_0} \\
-        ...            \\
-        \hat{\alpha_k}
-    \end{matrix}
-    = (^TXX)^{-1}\cdot ^TX^>y
+\llabel{9:7}
+\begin{matrix}
+\hat{\alpha_0}\\
+...\\
+\hat{\alpha_k}
+\end{matrix}
+= (^TXX)^{-1}\cdot ^TX^>y
 \end{gather}
 Из вывода СЛАУ \lref{9:5} следует $g'' = \frac{\partial^2g}{\partial \alpha_i \partial \alpha_j} = 2 ^TXX>0$
 Следовательно, \lref{9:7} - решение задачи \lref{9:4}.\\
-Для оценки $\hat{\sigma}^2$ величины $\sigma$ используется формула
+Для оценки $\hat{\sigma}^2$ величины $\sigma$ используется формула 
 \begin{gather}
-    \hat{\sigma}^2 = \frac{||x ^>\hat{\alpha} - ^>y||^2_e}{n-k-1}
+\hat{\sigma}^2 = \frac{||x ^>\hat{\alpha} - ^>y||^2_e}{n-k-1}
 \end{gather}
 \textbf{Пояснение за \lref{9:10}}
 \begin{gather}
-    \llabel{9:10}
-    \begin{cases}
-        \alpha_0 + \alpha_1x_1 = y_1 \\
-        \alpha_0 + \alpha_2x_2 = y_2 \\
-        ...
-        \alpha_0 + \alpha_1x_n = y_n
-    \end{cases}
-    \Longleftrightarrow X ^>\alpha = ^>y
+\llabel{9:10}
+\begin{cases}
+\alpha_0 + \alpha_1x_1 = y_1\\
+\alpha_0 + \alpha_2x_2 = y_2\\
+...
+\alpha_0 + \alpha_1x_n = y_n
+\end{cases}
+\Longleftrightarrow X ^>\alpha = ^>y
 \end{gather}
-где
-
+где 
 \begin{gather}
-    X = \begin{matrix}
-        1 & x_1 \\
-        ...     \\
-        1 & x_n
-    \end{matrix}
-    \qquad ^>y =
-    \begin{matrix}
-        y_1 \\
-        ... \\
-        y_n \\
-    \end{matrix}
+X = \begin{matrix}
+1 & x_1\\
+...\\
+1 & x_n
+\end{matrix}
+\qquad ^>y = \begin{matrix}
+y_1\\
+...\\
+y_n\\
+\end{matrix}
 \end{gather}
-
 Такая штука следует из модели парной линейной регрессии, где $^>\alpha = \left[\alpha_0,\alpha_1\right>$
 \end{document}
