@@ -5,5 +5,123 @@
 \qtitle{08}
 Модель парной линейной регрессии.
 
+В этой модели зависимость величины y от переменной, называемой фактором, x с пробегом в $R$ имеет вид:
+\begin{equation}
+ \ y = \alpha_0 + \alpha_1 * x + \epsilon,
+\llabel{eq:1}
+\end{equation}
 
+где $\epsilon$ - случайная составляющая модели, имеющая стандартный нормальный закон распределения с неизвестной дисперсией, и $\alpha^> = [\alpha_0 , \alpha_1 ]$ - вектор неизвестных параметров тренда модели $y = \alpha_0 + \alpha_1 * x$.
+
+В эксперименте для значений $x_1, x_2, ... x_n$ переменной x модель $(1)$ измеряются соответствующие значения $y_1, y_2, ... y_n$ величины y, называемой регрессором. Значения представлены ниже:
+ $\left(
+ \begin{matrix}
+ i & x & y \\
+ 1 & x_1 & y_1\\
+ 2 & x_2 & y_2 \\
+ ... & ... & ...\\
+ n & x_n & y_n \\
+ \end{matrix}
+ \right)$
+
+Согласно модели $(1)$ и представленной таблице для оценки вектора $\alpha$ рассматривается приближенная СЛАУ (как правило, несовместная):
+
+\begin{gather}
+	\begin{cases}
+		\ y_1 = \alpha_0 + \alpha_1 * x_1,\\
+		\ y_2 = \alpha_0 + \alpha_1 * x_2,\\
+		\ ..... \\
+		\ y_n = \alpha_0 + \alpha_1 * x_n,
+	\end{cases}
+\end{gather}
+ 
+В виде системы это запишется следующим образом:
+\begin{gather}
+	\label{2}
+	X*d^{>} = y^{>}, 
+\end{gather}
+где 
+$X = \left(
+\begin{matrix}
+1 & x_1\\
+1 & x_2\\
+... & ...\\
+1 & x_n\\
+\end{matrix}
+\right)$ 
+
+$Y = \left(
+\begin{matrix}
+y_1\\
+y_2\\
+...\\
+y_n\\
+\end{matrix}
+\right)$ 
+
+Возможную несовместность СЛАУ (2) иллюстрирует рисунок 1.
+
+\begin{minipage}{.35\linewidth}
+	\includegraphics[width=1\linewidth]{8}
+\end{minipage}
+\hfill
+\begin{minipage}{.6\linewidth}
+	Построенная на рисунке линия называется трендом и задается уравнением $y = \alpha_0 + \alpha_1 * x$. Для оценки вектора $\alpha^{>}$ решают задачу:
+	\begin{gather}
+		\label{2}
+		g(\alpha^{>}) = \sum_{i=1}^{n}(\alpha_0 + \alpha_1 * x_i - y_i)^2 \rightarrow min, 
+	\end{gather}
+Решение этой задачи обеспечивает близкую к экспериментальным точкам прямую. Решение этой задачи приводится ниже.
+\end{minipage}\\
+
+\begin{gather}
+	\begin{cases}
+		\frac{\partial y}{\partial  \alpha_0} = 0;\\
+		\frac{\partial y}{\partial  \alpha_1} = 0;
+	\end{cases}
+\end{gather}
+Отсюда получаем, что
+\begin{gather}
+	\begin{cases}
+	 \sum_{i=1}^{n}(\alpha_0 + \alpha_1 * x_i - y_i) = 0;\\
+	 \sum_{i=1}^{n} x_i (\alpha_0 + \alpha_1 * x_i - y_i) = 0;
+	\end{cases}
+\end{gather}
+Далее:
+\begin{gather}
+	\begin{cases}
+	\sum_{i=1}^{n}(\alpha_1 * x_i) + n*\alpha_0 = \sum_{i=1}^{n}x_i y_i;\\
+	\sum_{i=1}^{n}(x_i   \alpha_1 * x_i) + \sum_{i=1}^{n}(x_i * \alpha_0) = \sum_{i=1}^{n} x_i y_i;
+\end{cases}
+\end{gather}
+Подставив значения X и Y, получим $X^{T}*X*\alpha^{>} = X^{T}*y^{>}$. $X^{T}*X$ можно записать матрицей:
+ $\left(
+\begin{matrix}
+n & \sum x_i\\
+\sum x_i  & \sum (x_i)^2\\
+\end{matrix}
+\right)$
+Если rang(X) = 2, то $X^{T}*X \in GL(R,2)$. В этом случае МНК-решение СЛАУ 2 ищется как решение СЛАУ 5 в виде 
+\begin{equation}
+\ (X^{T}*X)^{-1} *X^{T}*y  = B,
+\llabel{eq:6}
+\end{equation}
+где $B = \left(
+\begin{matrix}
+\hat{\alpha_0} \\
+\hat{\alpha_1}\\
+\end{matrix}
+\right)$
+Из вида 4 функции g следует, что $g^{''} = \left(
+\begin{matrix}
+\frac{(\partial)^2 g}{\partial  (\alpha_0)^2} & \frac{(\partial)^2 g}{\partial(\alpha_0)\partial (\alpha_1)} \\
+\frac{(\partial)^2 g}{\partial(\alpha_0)\partial (\alpha_1)} & \frac{(\partial)^2 g}{\partial  (\alpha_1)^2}\\
+\end{matrix}
+\right)$ обеспечивает минимум функции 4.
+Для $n > k+1$ справедлива оценка $\hat{\partial}$:
+ \begin{gather}
+ 	\begin{cases}
+ 		\hat{\partial^2} = \frac{\sum_{i=1}^{n}\hat{\alpha_0} + \hat{\alpha_1}*x_1^2}{n-2}
+ 	\end{cases}
+ \end{gather}
 \end{document}

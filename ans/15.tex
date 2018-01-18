@@ -6,4 +6,53 @@
 Метод Зейделя как модификация метода простой итерации для решения СЛАУ.
 
 
+Для СЛАУ вида 
+\begin{gather*}
+^>x=G\cdot \;^>x+\;^>f
+\end{gather*}
+можно использовать итерационный метод Зейделя с началом в $^>x_0\in \;^>\mathbb R^n$ и рабочей формулой 
+\begin{gather*}
+^>x_k=P\cdot \;^>x_{k-1}+Q\cdot \;^>x_k+ \;^>f,
+\end{gather*}
+где $P=\left(
+\begin{matrix}
+g^1_1 & g^1_2 & \cdots & g^1_n \\
+0 & g^2_2 & \cdots & g^2_n \\
+\vdots & \cdots & \ddots & \vdots \\
+0 & \cdots & \cdots & g^n_n \\
+\end{matrix}
+\right)$, $Q = \left(
+\begin{matrix}
+0 & \cdots & \cdots & 0 \\
+g^2_1 & 0 & \cdots & 0 \\
+\vdots & \cdots & \ddots & \vdots \\
+g^n_1 & g^n_2 & \cdots & 0
+\end{matrix}
+\right)$.
+
+Рассмотрим рабочую формулу для метода Зейделя для $n=3$:
+\begin{gather*}
+\left\{
+	\begin{gathered}
+	x^1_k=g^1_1x^1_{k-1}+g^1_2x^2_{k-1}+g^1_3x^3_{k-1} + f^1 \hfill \\
+	x^2_k=g^2_1x^1_{k}+g^2_2x^2_{k-1}+g^2_3x^3_{k-1} + f^2 \hfill \\
+	x^3_k=g^3_1x^1_{k}+g^3_2x^2_{k}+g^3_3x^3_{k-1} + f^3 \hfill \\
+	\end{gathered}
+\right.
+\end{gather*}
+\begin{theorem}
+(о сходимости метода Зейделя) Если $||G||<1$, то метод Зейделя с рабочей формулой сходится к решению $^>x_*$ СЛАУ вида $^>x=G\cdot \;^>x+\;^>f$, то есть 
+\begin{gather*}
+\lim\limits_{k\rightarrow +\infty} \;^>x_k=\;^>x_*
+\end{gather*}
+\end{theorem}
+\textbf{Замечание} (о сходимости метода Зейделя) \\
+а) В условиях теоремы о сходимости метод Зейделя как правило сходится быстрее метода простой итерации. \\
+б) Из рабочей формулы для $n=3$ (см. выше) следует, что
+\begin{gather*}
+(E_n-Q)\cdot \;^>x_k=P\cdot \;^>x_{k-1}+\;^>f \Longleftrightarrow \;^>x_k=(E_n-Q)^{-1}P\cdot \;^>x_k + (E_n-Q)^{-1}\cdot \;^>f \Longleftrightarrow \\
+\Longleftrightarrow  \;^>x_k = \tilde{G}\cdot \;^>x_{k-1}+\;^>\tilde{f}
+\end{gather*}
+где $\tilde{G}=(E_n-Q)^{-1}\cdot P$ и $^>\tilde{f}=(E_n-Q)^{-1}\cdot \;^>f$.\\
+Следовательно, метод Зейделя -- модифицированный метод простой итерации.
 \end{document}
